@@ -30,15 +30,15 @@ const rl = readline.createInterface({
 });
 
 function getRandomAmount() {
-  const min = 0.01;
-  const max = 0.05;
+  const min = 0.1;
+  const max = 0.9;
   const randomAmount = Math.random() * (max - min) + min;
-  return ethers.utils.parseEther(randomAmount.toFixed(4));
+  return parseFloat(randomAmount.toFixed(4));
 }
 
 function getRandomDelay() {
-  const minDelay = 1 * 60 * 1000;
-  const maxDelay = 2 * 60 * 1000;
+  const minDelay = 5 * 60 * 1000;
+  const maxDelay = 10 * 60 * 1000;
   return Math.floor(Math.random() * (maxDelay - minDelay + 1) + minDelay);
 }
 
