@@ -10,7 +10,7 @@
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/winsnip/Monad-trx.git
+   git clone https://github.com/blinksatan/Monad-trx.git
    cd Monad-trx
    ```
 2. **Install Dependencies**
