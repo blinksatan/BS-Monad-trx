@@ -55,18 +55,25 @@ async function loadChalk() {
     });
   }
 
-  async function runScriptsSequentially(loopCount, selectedScripts) {
+  function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+  
+  async function runScriptsRandomly(loopCount, selectedScripts) {
     for (let i = 0; i < loopCount; i++) {
-      console.log(chalk.blueBright(`\nðŸ”„ Loop ${i + 1} dari ${loopCount}...\n`));
-      for (const script of selectedScripts) {
+      console.log(chalk.blueBright(`\n🔀 Loop ${i + 1} dari ${loopCount} (Acak)...\n`));
+      const shuffledScripts = shuffleArray([...selectedScripts]); // Create a shuffled copy
+  
+      for (const script of shuffledScripts) {
         try {
           await runScript(script);
         } catch (error) {
-          console.error(chalk.red(`âš ï¸ Melewati ${script.name} karena error`));
+          console.error(chalk.red(`⚠️ Melewati ${script.name} karena error`));
         }
       }
     }
   }
+
 
   async function main() {
     const { selectedModules } = await prompts({
@@ -97,7 +104,7 @@ async function loadChalk() {
 
     console.log(chalk.green(`\nðŸš€ Memulai eksekusi ${selectedModules.length} modul selama ${loopCount} loop\n`));
 
-    await runScriptsSequentially(loopCount, selectedModules);
+    await runScriptsRandomly(loopCount, selectedModules);
 
     console.log(chalk.green.bold("\nâœ…âœ… Semua modul selesai dijalankan! âœ…âœ…\n"));
   }
