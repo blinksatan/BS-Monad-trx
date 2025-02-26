@@ -17,7 +17,7 @@ const gasLimitStake = 500000;
 const gasLimitUnstake = 800000;
 
 const STAKE_AMOUNT = ethers.utils.parseEther("0.1"); 
-const UNSTAKE_DELAY = 5 * 60 * 1000; 
+const UNSTAKE_DELAY = 15 * 60 * 1000; 
 async function stakeMON() {
     try {
         console.log(`🪫  Starting Kitsu`.blue);
