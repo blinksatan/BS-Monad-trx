@@ -53,7 +53,7 @@ async function handleTokenTransfers() {
 
     console.log(`🪫  Starting AutoSend ⏩⏩⏩⏩`.blue);
     console.log(` `);
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 10; i++) {
         await transferTokens(wallet, i);
     }
 
