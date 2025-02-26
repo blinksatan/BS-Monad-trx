@@ -17,10 +17,10 @@ const gasLimitStake = 500000;
 const gasLimitUnstake = 800000;
 
 function getRandomAmount() {
-    const min = 0.01;
-    const max = 0.05;
-    const randomAmount = Math.random() * (max - min) + min;
-    return ethers.utils.parseEther(randomAmount.toFixed(4));
+  const min = 0.1;
+  const max = 0.9;
+  const randomAmount = Math.random() * (max - min) + min;
+  return parseFloat(randomAmount.toFixed(4));
 }
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
