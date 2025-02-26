@@ -10,8 +10,8 @@
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/blinksatan/Monad-trx.git
-   cd Monad-trx
+   git clone https://github.com/blinksatan/BS-Monad-trx
+   cd BS-Monad-trx
    ```
 2. **Install Dependencies**
    ```bash
