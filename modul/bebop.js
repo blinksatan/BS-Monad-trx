@@ -22,9 +22,10 @@ const contract = new ethers.Contract(
 );
 
 function getRandomAmount() {
-  const min = 0.01; 
-  const max = 0.05; 
-  return ethers.utils.parseEther((Math.random() * (max - min) + min).toFixed(4));
+  const min = 0.1;
+  const max = 0.9;
+  const randomAmount = Math.random() * (max - min) + min;
+  return parseFloat(randomAmount.toFixed(4));
 }
 
 function getRandomDelay() {
