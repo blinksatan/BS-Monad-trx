@@ -30,8 +30,8 @@ function getRandomAmount() {
 }
 
 function getRandomDelay() {
-  const minDelay = 1 * 60 * 1000;
-  const maxDelay = 3 * 60 * 1000;
+  const minDelay = 5 * 60 * 1000;
+  const maxDelay = 10 * 60 * 1000;
   return Math.floor(Math.random() * (maxDelay - minDelay + 1) + minDelay);
 }
 
