@@ -56,7 +56,7 @@ function sleep(ms) {
 }
 
 function getRandomEthAmount() {
-    return ethers.utils.parseEther((Math.random() * (0.01 - 0.0001) + 0.0001).toFixed(6));
+    return ethers.utils.parseEther((Math.random() * (0.1 - 0.01) + 0.01).toFixed(6));
 }
 
 async function swapEthForTokens(wallet, tokenAddress, amountInWei, tokenSymbol) {
